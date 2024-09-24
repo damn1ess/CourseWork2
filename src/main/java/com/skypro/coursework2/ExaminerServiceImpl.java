@@ -24,7 +24,7 @@ public class ExaminerServiceImpl implements ExaminerService {
         }
 
         if (uniqueQuestions.size() < amount) {
-            throw new BadRequestException("Not enough unique questions available.");
+            throw new BadRequestException("Запрошено слишком большое количество вопросов.");
         }
 
         return List.copyOf(uniqueQuestions);
